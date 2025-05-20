@@ -1,0 +1,56 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Virtual environments
+venv/
+.env/
+.envrc
+.venv/
+
+# MacOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# macOS folder attributes
+Icon?
+._*
+
+# Thumbnails
+Thumbs.db
+ehthumbs.db
+
+# Python-specific cache
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Colab
+.ipynb_checkpoints/
+*.ipynb
+
+# VSCode
+.vscode/
+
+# Data files
+/data/raw/*
+/data/processed/*
+/models/*
+/static/posters/*
+
+# API keys or secrets (si los agregas a un archivo local)
+secrets.json
+*.env
+
+# Node modules (si usas alguna parte JS)
+node_modules/
