@@ -52,20 +52,46 @@ Proximamente en el tablero de Jira
 
 ## 📁 Estructura del repositorio prevista
 
-raíz/
+recomendador-peliculas-IA/
+│
+├── data/                  # Datasets descargados (puedes ignorar en .gitignore si pesan mucho)
+│
+├── model/                 # Código y modelos entrenados
+│   ├── entrenamiento/     # Scripts para entrenar
+│   └── modelos_guardados/ # Archivos .pkl o similares
+│
+├── app/                   # Interfaz web (HTML, CSS, JS o framework como Flask/FastAPI)
+│   └── static/            # Archivos estáticos: carátulas, CSS, JS
+│
+├── translator/            # Scripts relacionados con el modelo de traducción
+│
+├── docs/                  # Documentación y diseños
+│   ├── idea.md
+│   ├── arquitectura.drawio
+│   ├── interfaz.png
+│   ├── flujo_datos.md
+│   └── roadmap.md
+│
+├── tests/                 # Tests automáticos
+│
+├── .gitignore
 ├── README.md
+├── LICENSE
 ├── requirements.txt
-├── data/
-│ ├── raw/
-│ └── processed/
-├── models/
-├── src/
-│ ├── app/
-│ └── recommender/
-├── static/
-│ └── posters/
-└── web/
-└── templates/
+└── main.py                # Archivo principal que ejecuta la app
+
+---
+
+## 🪾 Estructura de ramas
+
+main                  → Rama principal y estable del proyecto
+|
+├── dev               → Rama de desarrollo general
+|   ├── feature/...   → Nuevas funcionalidades (ej: feature/interfaz-web)
+|   ├── bugfix/...    → Correcciones de errores
+|   └── experiment/...→ Pruebas y prototipos
+|
+└── docs              → Documentación y mejoras del README, wiki, etc.
 
 ---
 
