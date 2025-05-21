@@ -51,7 +51,7 @@ Proximamente en el tablero de Jira
 ---
 
 ## 📁 Estructura del repositorio prevista
-
+<pre>
 recomendador-peliculas-IA/
 │
 ├── data/                  # Datasets descargados (puedes ignorar en .gitignore si pesan mucho)
@@ -79,11 +79,11 @@ recomendador-peliculas-IA/
 ├── LICENSE
 ├── requirements.txt
 └── main.py                # Archivo principal que ejecuta la app
-
+</pre>
 ---
 
-## 🪾 Estructura de ramas
-
+## 🪵 Estructura de ramas
+<pre>
 main                  → Rama principal y estable del proyecto
 |
 ├── dev               → Rama de desarrollo general
@@ -92,7 +92,7 @@ main                  → Rama principal y estable del proyecto
 |   └── experiment/...→ Pruebas y prototipos
 |
 └── docs              → Documentación y mejoras del README, wiki, etc.
-
+</pre>
 ---
 
 ## 📈 Diagramas
