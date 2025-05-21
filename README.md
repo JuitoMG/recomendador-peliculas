@@ -95,6 +95,17 @@ main                  → Rama principal y estable del proyecto
 
 ---
 
+## 📈 Diagramas
+
+- Los diagramas de flujo y arquitectura se están desarrollando con [draw.io](http://draw.io).
+- Se encuentran en la carpeta `docs/` en formato `.drawio`.
+
+### Diagramas actuales
+
+- `flujo_recomendador.drawio`: Representa el funcionamiento de la app desde la selección de películas hasta la obtención de recomendaciones.
+
+---
+
 ## 📜 Licencia
 
 Este proyecto está bajo la licencia [MIT](LICENSE), lo que significa que puedes usarlo, modificarlo y distribuirlo libremente, siempre que mantengas los créditos originales.
