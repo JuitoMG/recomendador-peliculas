@@ -42,11 +42,6 @@ ehthumbs.db
 # VSCode
 .vscode/
 
-# Data files
-/data/raw/*
-/data/processed/*
-/models/*
-/static/posters/*
 
 # API keys or secrets (si los agregas a un archivo local)
 secrets.json
