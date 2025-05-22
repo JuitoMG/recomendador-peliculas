@@ -7,8 +7,8 @@
 - [x] CHNGELOG
 
 ## Etapa 2: Planificación técnica
-- [ ] Crear Roadmap
-- [ ] Dividir tareas por módulos en Jira
+- [x] Crear Roadmap
+- [x] Dividir tareas por módulos en Jira
 
 ## Etapa 3: Recolección y procesamiento de datos
 - [ ] Descargar Dataset TMDB

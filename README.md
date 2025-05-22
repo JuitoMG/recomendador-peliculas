@@ -97,14 +97,17 @@ main                  → Rama principal y estable del proyecto
 
 ## 📈 Diagramas
 
-- Los diagramas de flujo y arquitectura se están desarrollando con [draw.io](http://draw.io).
-- Se encuentran en la carpeta `docs/` en formato `.drawio`.
-
-### Diagramas actuales
-
 - `flujo_recomendador.drawio`: Representa el funcionamiento de la app desde la selección de películas hasta la obtención de recomendaciones.
+- `arquitectura_app.drawio`: Mapa técnico que muestra la conexión entre las distintas partes del sistema. 
 
 ---
+
+## Herramientas utilizadas
+
+- [Python](https://python.org/) - Lenguaje principal.
+- [Draw.io](https://drawio.app) - Diagramas de flujo y arquitectura.
+- [Jira](https://www.atlassian.com/software/jira) - Gestión de tareas y roadmap.
+- [GitHub](https://github.com) - Control de versiones y almacenamiento del repositorio.
 
 ## 📜 Licencia
 
