@@ -15,7 +15,7 @@ HEADERS = {
     "Content-Type": "application/json;charset=utf-8"
 }
 
-def get_movies_by_year(year, pages=1):
+def get_movies_by_year(year, pages=5):
     all_movies = []
     for page in range(1, pages+1):
         url = f"{BASE_URL}/discover/movie?language={LANG}&sort_by=popularity.desc&primary_release_year={year}&page={page}"
@@ -49,7 +49,7 @@ def save_to_json (data, filename):
         json.dump(data, f, ensure_ascii=False, indent=2)
 
 def main():
-    movies = get_movies_by_year(2021, pages=2)
+    movies = get_movies_by_year(2005, pages=10)
     enriched = []
     for m in movies:
         details = get_movie_details(m['id'])
@@ -67,7 +67,7 @@ def main():
                 "director": director
             })
         sleep(0.25) 
-    save_to_json(enriched, "movies_2021.json")
+    save_to_json(enriched, "movies_2005.json")
     print("Descarga completada.") 
 
 if __name__ == "__main__":
