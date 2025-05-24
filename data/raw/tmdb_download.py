@@ -43,6 +43,23 @@ def get_director(movie_id):
                 return person['name']
     return None
 
+def get_keywords(movie_id):
+    url = f"{BASE_URL}/movie/{movie_id}/keywords"
+    resp = requests.get(url, headers=HEADERS)
+    if resp.status_code == 200:
+        data = resp.json()
+        return [kw['name'] for kw in data.get('keywords', [])]
+    return []
+
+def get_main_cast(movie_id, max_actors=3):
+    url = f"{BASE_URL}/movie/{movie_id}/credits"
+    resp = requests.get(url, headers=HEADERS)
+    if resp.status_code == 200:
+        credits = resp.json()
+        cast = [actor['name'] for actor in credits['cast'][:max_actors]]
+        return cast
+    return []
+
 def save_to_json (data, filename):
     os.makedirs("data/raw", exist_ok=True)
     with open(f"data/raw/{filename}", "w", encoding="utf-8") as f:
@@ -59,12 +76,20 @@ def main():
                 "id": m['id'],
                 "title": m['title'],
                 "original_title": m['original_title'],
+                "production_countries": [c['name'] for c in details.get('production_countries', [])],
                 "overview": m['overview'],
+                "tagline": details.get("tagline"),
                 "release_date": m['release_date'],
                 "original_language": m['original_language'],
                 "genres": [g['name'] for g in details.get('genres', [])],
+                "runtime": details.get("runtime"),
+                "budget": details.get("budget"),
+                "revenue": details.get("revenue"),
+                "cast": get_main_cast(m['id']),
                 "vote_average": details.get("vote_average"),
-                "director": director
+                "director": director,
+                "keywords": get_keywords(m['id'])
+
             })
         sleep(0.25) 
     save_to_json(enriched, "movies_2005.json")
