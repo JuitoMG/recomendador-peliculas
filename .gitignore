@@ -37,7 +37,7 @@ ehthumbs.db
 
 # Colab
 .ipynb_checkpoints/
-*.ipynb
+
 
 # VSCode
 .vscode/
