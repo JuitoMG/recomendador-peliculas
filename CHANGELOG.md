@@ -3,6 +3,9 @@
 Este archivo registra únicamente errores detectados durante el desarrollo.
 
 ---
+## [Unreleased]
+-Corrección de problema con los géneros de las películas
+
 
 ## [Unreleased]
 - Corrección del árbol de estructura para que se vea bien en GitHub.
