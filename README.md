@@ -16,8 +16,8 @@ Este proyecto consiste en un sistema de recomendación de películas con interf�
 ## 🛠️ Tecnologías utilizadas
 
 - **Python** - Backend y entrenamiento del modelo.
+- **Jupyter Notebook** - Desarrollo exploratorio, análisis y visualización de datos.
 - **Scikit-learn / Pandas / Numpy** - Preprocesamiento y modelos.
-- **Helsinki-NLP** - Traducción de temas y géneros.
 - **TMDB API** - Fuente de datos de películas y carátulas.
 - **HTML + CSSS + FW** - Interfaz del usuario.
 - **Google Colab** - Entrenamiento en la nube del modelo.
@@ -41,8 +41,7 @@ Este proyecto consiste en un sistema de recomendación de películas con interf�
 | Módulo                  | Estado        |
 |-------------------------|---------------|
 | Diseño inicial          | ✅ Completo   |
-| Obtención de datos TMDB | 🔄 En curso   |
-| Modelo de traducción    | 🕐 Pendiente  |
+| Obtención de datos TMDB | ✅ Completo   |
 | Entrenamiento IA        | 🕐 Pendiente  |
 | Interfaz web            | 🕐 Pendiente  |
 
@@ -105,6 +104,7 @@ main                  → Rama principal y estable del proyecto
 ## Herramientas utilizadas
 
 - [Python](https://python.org/) - Lenguaje principal.
+- [Jupyter Notebook](https://jupyter.org/) - Desarrollo y ejecución de notebooks interactivos.
 - [Draw.io](https://drawio.app) - Diagramas de flujo y arquitectura.
 - [Jira](https://www.atlassian.com/software/jira) - Gestión de tareas y roadmap.
 - [GitHub](https://github.com) - Control de versiones y almacenamiento del repositorio.
