@@ -105,6 +105,7 @@ main                  → Rama principal y estable del proyecto
 
 - [Python](https://python.org/) - Lenguaje principal.
 - [Jupyter Notebook](https://jupyter.org/) - Desarrollo y ejecución de notebooks interactivos.
+- [Google Colab](https://colab.research.google.com/) - Desarrollo y ejecución de notebooks.
 - [Draw.io](https://drawio.app) - Diagramas de flujo y arquitectura.
 - [Jira](https://www.atlassian.com/software/jira) - Gestión de tareas y roadmap.
 - [GitHub](https://github.com) - Control de versiones y almacenamiento del repositorio.
