@@ -42,7 +42,7 @@ Este proyecto consiste en un sistema de recomendación de películas con interf�
 |-------------------------|---------------|
 | Diseño inicial          | ✅ Completo   |
 | Obtención de datos TMDB | ✅ Completo   |
-| Entrenamiento IA        | 🕐 Pendiente  |
+| Entrenamiento IA        | ✅ Completo   |
 | Interfaz web            | 🕐 Pendiente  |
 
 Proximamente en el tablero de Jira
