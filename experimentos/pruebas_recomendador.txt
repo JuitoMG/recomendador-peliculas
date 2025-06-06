@@ -1,0 +1,149 @@
+---modelo_recomendador---
+
+Prueba 1 ( B- Bueno / R - Regular / M - Malo )
+
+Los Aristogatos
+Los ojos del diablo (ID: 29514) - Similitud: 0.204 - M
+Apocalipsis Z: el principio del fin (ID: 1118031) - Similitud: 0.138 - M
+El gato infernal (ID: 20701) - Similitud: 0.131 - M
+Garfield: La película (ID: 748783) - Similitud: 0.129 - B
+Heretic (Hereje) (ID: 1138194) - Similitud: 0.108 - M
+
+
+Constantine
+El exorcista III (ID: 11587) - Similitud: 0.167 - B 
+Oddity (ID: 1216191) - Similitud: 0.111 - R
+Jarhead, el infierno espera (ID: 25) - Similitud: 0.088 - M 
+Pretty Baby (ID: 205673) - Similitud: 0.082 - M 
+Watchmen: Capítulo 2 (ID: 1299652) - Similitud: 0.081 - M
+
+
+Nacida para el mal
+Eva al desnudo (ID: 705) - Similitud: 0.153 - B 
+La envidiosa (ID: 85293) - Similitud: 0.118 - R
+En un lugar solitario (ID: 17057) - Similitud: 0.114 - B
+Nacida ayer (ID: 24481) - Similitud: 0.111 - M
+Captain China (ID: 313531) - Similitud: 0.086 - M
+
+
+Colt 45
+La ruta del caribú (ID: 215453) - Similitud: 0.258 - B 
+Roy Colt y Winchester Jack (ID: 92788) - Similitud: 0.142 - B 
+El señor de la guerra (ID: 1830) - Similitud: 0.097 - M 
+Billete a Tomahawk (ID: 136772) - Similitud: 0.081 - B 
+Corazón de hielo (ID: 18262) - Similitud: 0.081 - M
+
+
+
+Película base - Bueno - Regular - Malo
+Los Aristogatos - 1 - 0 - 4
+Constantine - 1 - 1 - 3
+Nacida para el mal - 2 - 1 - 2
+Colt 45 - 3 - 0 - 2
+
+*Recomendaciones inconsistentes
+*El modelo confunde palabras clave con tono o género
+*No entiende el target o contexto
+*Es necesario separar los campos y ajustar pesos
+
+---------------------------------------------
+
+---modelo_recomendador_mejorado---
+
+Prueba 1 - (Pesos: overview = 0.4, keywords = 0.2, genres = 0.15, director = 0.1, country = 0.05, topic = 0.1) 
+
+Película base: Constantine
+Recomendaciones:
+
+🎬 El gato infernal (ID: 20701) - Similitud: 2.573 - Razones: ['topic', 'genres']
+🎬 Hostage (ID: 2026) - Similitud: 2.319 - Razones: ['country', 'topic']
+🎬 Crash (Colisión) (ID: 1640) - Similitud: 2.257 - Razones: ['country', 'topic']
+🎬 Vidas al límite (ID: 7873) - Similitud: 2.115 - Razones: ['topic', 'country']
+🎬 Delta Force 2 (ID: 19086) - Similitud: 2.083 - Razones: ['topic', 'country']
+
+*Algo coherente en temas drmáticos, intensos, psicológicos o sobrenaturales.
+
+
+Película base: Los aristogatos
+Recomendaciones:
+
+🎬 Kung Fu Panda 4 (ID: 1011985) - Similitud: 2.829 - Razones: ['country', 'topic']
+🎬 Garfield: La película (ID: 748783) - Similitud: 2.784 - Razones: ['topic', 'genres']
+🎬 Valiant (ID: 14175) - Similitud: 2.558 - Razones: ['topic', 'genres']
+🎬 Vaiana 2 (ID: 1241982) - Similitud: 2.544 - Razones: ['topic', 'genres']
+🎬 La isla (ID: 1635) - Similitud: 2.512 - Razones: ['country', 'topic']
+
+*Temas infantiles o familiares en general, salvo La Isla.
+
+Película base: Delta Force 2
+Recomendaciones:
+
+🎬 Hostage (ID: 2026) - Similitud: 2.667 - Razones: ['topic', 'country']
+🎬 Wolfs (ID: 877817) - Similitud: 2.615 - Razones: ['country', 'topic']
+🎬 Distrito 34: Corrupción total (ID: 31598) - Similitud: 2.554 - Razones: ['country', 'topic']
+🎬 48 horas más (ID: 11595) - Similitud: 2.530 - Razones: ['country', 'topic']
+🎬 Vidas al límite (ID: 7873) - Similitud: 2.521 - Razones: ['country', 'topic']
+
+*Temática similar (Acción, crimen, secuestros)
+
+
+
+Película base: Wolfs
+Recomendaciones:
+
+🎬 48 horas más (ID: 11595) - Similitud: 2.863 - Razones: ['country', 'topic']
+🎬 Ejecutivo ejecutor (ID: 20876) - Similitud: 2.847 - Razones: ['country', 'topic']
+🎬 Bad Boys: Ride or Die (ID: 573435) - Similitud: 2.756 - Razones: ['country', 'topic']
+🎬 El clan de los Rompehuesos (ID: 9291) - Similitud: 2.721 - Razones: ['country', 'topic']
+🎬 Distrito 34: Corrupción total (ID: 31598) - Similitud: 2.696 - Razones: ['country', 'topic']
+
+*Temática similar, thriller de acción
+
+
+
+Película base: Garfield: La película
+Recomendaciones:
+
+🎬 Los aristogatos (ID: 10112) - Similitud: 2.784 - Razones: ['topic', 'genres']
+🎬 Valiant (ID: 14175) - Similitud: 2.451 - Razones: ['topic', 'genres']
+🎬 Vaiana 2 (ID: 1241982) - Similitud: 2.375 - Razones: ['topic', 'genres']
+🎬 Chicken Little (ID: 9982) - Similitud: 2.370 - Razones: ['director', 'genres']
+🎬 Kung Fu Panda 4 (ID: 1011985) - Similitud: 2.297 - Razones: ['topic', 'genres']
+
+*Películas familiares o de animación 
+
+
+Película base: Eva al desnudo
+Recomendaciones:
+
+🎬 Su propia vida (ID: 176734) - Similitud: 3.232 - Razones: ['genres', 'country']
+🎬 La segunda mujer (ID: 62661) - Similitud: 3.014 - Razones: ['genres', 'country']
+🎬 Rocky V (ID: 1375) - Similitud: 3.008 - Razones: ['genres', 'country']
+🎬 El semental italiano (ID: 4255) - Similitud: 2.655 - Razones: ['country', 'topic']
+🎬 Una vida por delante (ID: 1947) - Similitud: 2.610 - Razones: ['genres', 'topic']
+
+*Demasiado peso en país y género.
+
+
+Película base: Patton
+Recomendaciones:
+
+🎬 Bill, qué grande eres (ID: 54615) - Similitud: 2.587 - Razones: ['country', 'topic']
+🎬 El reino de los cielos (ID: 1495) - Similitud: 2.320 - Razones: ['topic', 'genres']
+🎬 Los chicos de la Nickel (ID: 1028196) - Similitud: 2.297 - Razones: ['country', 'topic']
+🎬 Cerco de fuego (ID: 48897) - Similitud: 2.290 - Razones: ['country', 'topic']
+🎬 Buenas noches, y buena suerte (ID: 3291) - Similitud: 2.279 - Razones: ['topic', 'genres']
+
+*De nuevo demasiado peso en país, que desvirtúa algunos resultados.
+
+
+Película base: El especialista
+Recomendaciones:
+
+🎬 El padre de la novia (ID: 20758) - Similitud: 2.346 - Razones: ['topic', 'genres']
+🎬 ¡Marchando! (ID: 7553) - Similitud: 2.264 - Razones: ['topic', 'genres']
+🎬 Pasión sin barreras (ID: 41003) - Similitud: 2.202 - Razones: ['topic', 'genres']
+🎬 London: Oscura obsesión (ID: 7515) - Similitud: 2.184 - Razones: ['topic', 'genres']
+🎬 Academia antivicio 2 (ID: 28496) - Similitud: 2.178 - Razones: ['topic', 'genres']
+
+*Aquí el modelo patina con todas.
