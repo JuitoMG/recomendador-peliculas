@@ -66,7 +66,7 @@ def save_to_json (data, filename):
         json.dump(data, f, ensure_ascii=False, indent=2)
 
 def main():
-    movies = get_movies_by_year(2005, pages=10)
+    movies = get_movies_by_year(2007, pages=15)
     enriched = []
     for m in movies:
         details = get_movie_details(m['id'])
@@ -92,7 +92,7 @@ def main():
 
             })
         sleep(0.25) 
-    save_to_json(enriched, "movies_2005.json")
+    save_to_json(enriched, "movies_2007.json")
     print("Descarga completada.") 
 
 if __name__ == "__main__":
