@@ -42,7 +42,7 @@ Este proyecto consiste en un sistema de recomendación de películas con interf�
 |-------------------------|---------------|
 | Diseño inicial          | ✅ Completo   |
 | Obtención de datos TMDB | ✅ Completo   |
-| Entrenamiento IA        | ✅ Completo   |
+| Entrenamiento IA        | 🕐 Completo   |
 | Interfaz web            | 🕐 Pendiente  |
 
 Proximamente en el tablero de Jira
@@ -109,6 +109,8 @@ main                  → Rama principal y estable del proyecto
 - [Draw.io](https://drawio.app) - Diagramas de flujo y arquitectura.
 - [Jira](https://www.atlassian.com/software/jira) - Gestión de tareas y roadmap.
 - [GitHub](https://github.com) - Control de versiones y almacenamiento del repositorio.
+
+---
 
 ## 📜 Licencia
 
