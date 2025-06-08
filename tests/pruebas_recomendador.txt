@@ -158,5 +158,5 @@ Prueba 3 - (Pesos: overview = 1.0, keywords = 0.0, genres = 0.0, director = 0.0,
 Prueba 4 - (Pesos: overview = 0.3, keywords = 0.25, genres = 0.1, director = 0.25, country = 0.05, topic = 0.05)
 *Las recomendaciones vuelven a ser las mismas que en la prueba 1 y la prueba 2
 
-*Necesidad de más películas
+*Necesidad de más películas. La muestra no acaba siendo muy variada, posible razón por la que recomiende las mismas películas siempre.
 
