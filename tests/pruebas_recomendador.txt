@@ -376,3 +376,154 @@ Recomendaciones:
 
 *El modelo parece que tocó techo, sigue dandole mucho peso a Country.
 *En películas de acción junta topic+country, no profundiza en subgéneros dentro de acción.
+
+--------------------------------------------------------------------
+
+
+---modelo_recomendador_mejorado_V3----
+
+Prueba 8: (Pesos: overview = 0.20, keywords = 0.28, genres = 0.20, director = 0.26, country = 0.005, topic = 0.55)
+
+
+Película base: Constantine
+Recomendaciones:
+
+🎬 El fin de los días (ID: 9946) - Similitud: 3.025 - Razones: ['genres', 'topic']
+🎬 Soy leyenda (ID: 6479) - Similitud: 2.885 - Razones: ['topic', 'director']
+🎬 Lara Croft: Tomb Raider (ID: 1995) - Similitud: 2.842 - Razones: ['topic', 'country']
+🎬 Los 4 fantásticos (ID: 9738) - Similitud: 2.825 - Razones: ['country', 'topic']
+🎬 Doctor Sueño (ID: 501170) - Similitud: 2.803 - Razones: ['topic', 'genres']
+
+Película base: Los aristogatos
+Recomendaciones:
+
+🎬 Tom y Jerry: Rumbo a marte (ID: 21078) - Similitud: 3.538 - Razones: ['country', 'topic']
+🎬 Mascotas 2 (ID: 412117) - Similitud: 3.513 - Razones: ['genres', 'country']
+🎬 El alucinante mundo de Norman (ID: 77174) - Similitud: 3.447 - Razones: ['genres', 'country']
+🎬 Tom y Jerry en la super carrera (ID: 42246) - Similitud: 3.436 - Razones: ['country', 'topic']
+🎬 Al rescate de Fondo de Bikini: La película de Arenita Mejillas (ID: 831815) - Similitud: 3.392 - Razones: ['genres', 'country']
+
+Película base: Delta Force 2
+Recomendaciones:
+
+🎬 Navy Seals, comando especial (ID: 427910) - Similitud: 3.459 - Razones: ['genres', 'country']
+🎬 Pootie Tang (ID: 10615) - Similitud: 3.306 - Razones: ['country', 'topic']
+🎬 Triple frontera (ID: 399361) - Similitud: 3.274 - Razones: ['country', 'topic']
+🎬 Uncharted (ID: 335787) - Similitud: 3.192 - Razones: ['country', 'topic']
+🎬 Cazador de tormentas (ID: 26129) - Similitud: 3.138 - Razones: ['country', 'topic']
+
+Película base: Garfield: La película
+Recomendaciones:
+
+🎬 TMNT: Tortugas Ninja Jóvenes Mutantes (ID: 1273) - Similitud: 3.304 - Razones: ['genres', 'topic']
+🎬 Tarzán 2 (ID: 15657) - Similitud: 2.962 - Razones: ['topic', 'genres']
+🎬 Madagascar (ID: 953) - Similitud: 2.917 - Razones: ['genres', 'topic']
+🎬 El rey león (ID: 420818) - Similitud: 2.803 - Razones: ['topic', 'genres']
+🎬 El último unicornio (ID: 10150) - Similitud: 2.794 - Razones: ['topic', 'genres']
+
+Película base: Eva al desnudo
+Recomendaciones:
+
+🎬 Sombras (ID: 15484) - Similitud: 3.723 - Razones: ['genres', 'country']
+🎬 Como plaga de langosta (ID: 5122) - Similitud: 3.667 - Razones: ['genres', 'country']
+🎬 Los chicos de la banda (ID: 34377) - Similitud: 3.618 - Razones: ['genres', 'country']
+🎬 Vuelve a la tienda de baratijas, Jimmy Dean (ID: 67772) - Similitud: 3.591 - Razones: ['genres', 'country']
+🎬 El zoo de cristal (ID: 68443) - Similitud: 3.584 - Razones: ['genres', 'country']
+
+Película base: Patton
+Recomendaciones:
+
+🎬 Arenas Sangrientas (ID: 18712) - Similitud: 3.149 - Razones: ['country', 'topic']
+🎬 El Batallón perdido (ID: 35583) - Similitud: 3.141 - Razones: ['country', 'topic']
+🎬 Día D, hora H (ID: 60908) - Similitud: 3.114 - Razones: ['country', 'topic']
+🎬 M.A.S.H. (ID: 651) - Similitud: 3.087 - Razones: ['country', 'topic']
+🎬 Devotion. Una historia de héroes (ID: 653851) - Similitud: 3.062 - Razones: ['country', 'topic']
+
+Película base: El especialista
+Recomendaciones:
+
+🎬 El invitado (ID: 59961) - Similitud: 3.669 - Razones: ['country', 'topic']
+🎬 El agente invisible (ID: 725201) - Similitud: 3.529 - Razones: ['country', 'topic']
+🎬 Speed: Máxima potencia (ID: 1637) - Similitud: 3.492 - Razones: ['country', 'topic']
+🎬 Enemy Gold (ID: 49983) - Similitud: 3.428 - Razones: ['country', 'topic']
+🎬 Al borde del abismo (ID: 49527) - Similitud: 3.314 - Razones: ['country', 'topic']
+
+
+*Un poco más afinado.
+
+-----------------------------------------------------------------------------------
+
+Prueba 9
+(Pesos: overview = 0.20, keywords = 0.28, genres = 0.22, director = 0.15, country = 0.001, topic = 0.12) 
+
+
+Película base: Constantine
+Recomendaciones:
+
+🎬 El fin de los días (ID: 9946) - Similitud: 3.025 - Razones: ['genres', 'topic']
+🎬 Soy leyenda (ID: 6479) - Similitud: 2.885 - Razones: ['topic', 'director']
+🎬 Lara Croft: Tomb Raider (ID: 1995) - Similitud: 2.842 - Razones: ['topic', 'country']
+🎬 Los 4 fantásticos (ID: 9738) - Similitud: 2.825 - Razones: ['country', 'topic']
+🎬 Doctor Sueño (ID: 501170) - Similitud: 2.803 - Razones: ['topic', 'genres']
+
+Película base: Los aristogatos
+Recomendaciones:
+
+🎬 Tom y Jerry: Rumbo a marte (ID: 21078) - Similitud: 3.538 - Razones: ['country', 'topic']
+🎬 Mascotas 2 (ID: 412117) - Similitud: 3.513 - Razones: ['genres', 'country']
+🎬 El alucinante mundo de Norman (ID: 77174) - Similitud: 3.447 - Razones: ['genres', 'country']
+🎬 Tom y Jerry en la super carrera (ID: 42246) - Similitud: 3.436 - Razones: ['country', 'topic']
+🎬 Al rescate de Fondo de Bikini: La película de Arenita Mejillas (ID: 831815) - Similitud: 3.392 - Razones: ['genres', 'country']
+
+Película base: Delta Force 2
+Recomendaciones:
+
+🎬 Navy Seals, comando especial (ID: 427910) - Similitud: 3.459 - Razones: ['genres', 'country']
+🎬 Pootie Tang (ID: 10615) - Similitud: 3.306 - Razones: ['country', 'topic']
+🎬 Triple frontera (ID: 399361) - Similitud: 3.274 - Razones: ['country', 'topic']
+🎬 Uncharted (ID: 335787) - Similitud: 3.192 - Razones: ['country', 'topic']
+🎬 Cazador de tormentas (ID: 26129) - Similitud: 3.138 - Razones: ['country', 'topic']
+
+Película base: Garfield: La película
+Recomendaciones:
+
+🎬 TMNT: Tortugas Ninja Jóvenes Mutantes (ID: 1273) - Similitud: 3.304 - Razones: ['genres', 'topic']
+🎬 Tarzán 2 (ID: 15657) - Similitud: 2.962 - Razones: ['topic', 'genres']
+🎬 Madagascar (ID: 953) - Similitud: 2.917 - Razones: ['genres', 'topic']
+🎬 El rey león (ID: 420818) - Similitud: 2.803 - Razones: ['topic', 'genres']
+🎬 El último unicornio (ID: 10150) - Similitud: 2.794 - Razones: ['topic', 'genres']
+
+Película base: Eva al desnudo
+Recomendaciones:
+
+🎬 Sombras (ID: 15484) - Similitud: 3.723 - Razones: ['genres', 'country']
+🎬 Como plaga de langosta (ID: 5122) - Similitud: 3.667 - Razones: ['genres', 'country']
+🎬 Los chicos de la banda (ID: 34377) - Similitud: 3.618 - Razones: ['genres', 'country']
+🎬 Vuelve a la tienda de baratijas, Jimmy Dean (ID: 67772) - Similitud: 3.591 - Razones: ['genres', 'country']
+🎬 El zoo de cristal (ID: 68443) - Similitud: 3.584 - Razones: ['genres', 'country']
+
+Película base: Patton
+Recomendaciones:
+
+🎬 Arenas Sangrientas (ID: 18712) - Similitud: 3.149 - Razones: ['country', 'topic']
+🎬 El Batallón perdido (ID: 35583) - Similitud: 3.141 - Razones: ['country', 'topic']
+🎬 Día D, hora H (ID: 60908) - Similitud: 3.114 - Razones: ['country', 'topic']
+🎬 M.A.S.H. (ID: 651) - Similitud: 3.087 - Razones: ['country', 'topic']
+🎬 Devotion. Una historia de héroes (ID: 653851) - Similitud: 3.062 - Razones: ['country', 'topic']
+
+Película base: El especialista
+Recomendaciones:
+
+🎬 El invitado (ID: 59961) - Similitud: 3.669 - Razones: ['genres', 'country']
+🎬 El agente invisible (ID: 725201) - Similitud: 3.529 - Razones: ['genres', 'country']
+🎬 Speed: Máxima potencia (ID: 1637) - Similitud: 3.492 - Razones: ['genres', 'country']
+🎬 Enemy Gold (ID: 49983) - Similitud: 3.428 - Razones: ['genres', 'country']
+🎬 Al borde del abismo (ID: 49527) - Similitud: 3.314 - Razones: ['country', 'topic']
+
+*En algunos casos Country sigue teniendo demasiado peso
+
+
+-----------------------------------------------------------------------------------
+
+Prueba 10
+(Pesos: overview = 0.20, keywords = 0.28, genres = 0.22, director = 0.12, country = 0.003, topic = 0.15) 
