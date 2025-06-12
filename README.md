@@ -109,6 +109,7 @@ main                  → Rama principal y estable del proyecto
 - [Draw.io](https://drawio.app) - Diagramas de flujo y arquitectura.
 - [Jira](https://www.atlassian.com/software/jira) - Gestión de tareas y roadmap.
 - [GitHub](https://github.com) - Control de versiones y almacenamiento del repositorio.
+- [Figma](https://www.figma.com/es-es/) - Diseño del boceto.
 
 ---
 
