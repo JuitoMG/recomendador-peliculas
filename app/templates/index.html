@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Recomendador de Películas IA</title>
+        <style>
+            body{
+                font-family: Arial, sans-serif;
+                background: #121212;
+                color: #ffffff;
+                text-align: center;
+                padding: 50px;
+            }
+            .container {
+                background: rgba(255,255,255,0.1);
+                padding: 30px;
+                border-radius: 15px;
+                display: inline-block;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Recomendador de películas por IA</h1>
+            <form method="post" action="/recomendar">
+                <input type="text" name="pelicula_base" placeholder="Introduce una película">
+                <button type="submit">Buscar</button>
+            </form>
+        </div>
+    </body>
+</html>
