@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang=""es>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Resultados</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Recomendaciones para "{{ pelicula_base }}"</h1>
+
+        {% if recomendaciones %}
+            <ul>
+                {% for r in recomendaciones %}
+                    <li>{{ r.title }} ({{ r.release_date }})</li>
+                {% endfor %}    
+            </ul>
+        {% else %}
+            <p>No se encontraron recomendaciones.</p>
+        {% endif %}
+        <a href="/">Volver</a>       
+    </div>
+</body>
+</html>
