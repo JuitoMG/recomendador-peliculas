@@ -9,16 +9,18 @@
 
 <body>
     <div class="container">
-        <h1>Recomendaciones para "{{ pelicula_base }}"</h1>
+        <h1>Recomendaciones para "{{ titulo }}"</h1>
 
         {% if recomendaciones %}
-            <ul>
-                {% for r in recomendaciones %}
-                    <li>{{ r.title }} ({{ r.release_date }})</li>
-                {% endfor %}    
+        <ul>
+            {% for titulo_rec, id_rec, score in recomendaciones %}
+                <li>
+                    <strong>{{ titulo_rec }}</strong> (ID: {{ id_rec }}) - Similitud: {{ score }}
+                </li>
+            {% endfor %}
             </ul>
         {% else %}
-            <p>No se encontraron recomendaciones.</p>
+            <p>No se encontraron recomendaciones para ese título.</p>
         {% endif %}
         <a href="/">Volver</a>       
     </div>

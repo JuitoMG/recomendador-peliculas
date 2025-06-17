@@ -13,9 +13,11 @@ templates = Jinja2Templates(directory="app/templates")
 async def formulario(request: Request):
     return templates.TemplateResponse("index.html", {"request": request})
 
-@app.post("/recomendar")
-def procesar_recomendacion(data: dict):
-    titulo = data.get('titulo')
-    top_n = int(data.get('top_n', 5))
+@app.post("/recomendar", response_class=HTMLResponse)
+async def recomendar(request: Request, titulo: str = Form(...), top_n: int = Form(...)):
     recomendaciones = recomendar_peliculas(titulo, top_n)
-    return {"recomendaciones": recomendaciones}
+    return templates.TemplateResponse("resultados.html", {
+        "request": request,
+        "titulo": titulo,
+        "recomendaciones": recomendaciones
+    })    
