@@ -1,13 +1,42 @@
 import pandas as pd
+import joblib
+from sklearn.metrics.pairwise import cosine_similarity
 
 # Cargamos los datos de películas
-df = pd.read_csv("data/processed/movies_merged.csv")
+df = pd.read_csv("data/processed/peliculas_enriquecidas.csv")
+df = df.reset_index(drop=True)
 
-def recomendar(pelicula_base, n_resultados=5):
-    resultados = df[df['title'].str.contains(pelicula_base, case=False, na=False)]
+#Carga del vectorizador y creación de la matriz
+vectorizer = joblib.load('model/modelos_guardados/tfidf_vectorizer.pk1')
+df['keywords_text'] = df['keywords_tfidf'].apply(lambda x: ' '.join(eval(x)) if isinstance(x, str) else '')
+df['genres_text'] = df['genres'].apply(lambda x: ' '.join(eval(x)) if isinstance(x, str) else '')
+df['topic_id_str'] = df['topic_id'].astype(str)
+df['main_country'] = df['main_country'].fillna('unknown')
+df['title'] = df['title'].fillna('')
 
-    if resultados.empty:
+df['text_for_vector'] = (
+    df['overview_lemmatized'] + ' ' +
+    df['keywords_text'] + ' ' +
+    df['genres_text'] + ' ' +
+    df['director'] + ' ' +
+    df['main_country'] + ' ' +
+    df['topic_id_str'] + ' ' +
+    df['title']
+)
+
+# Generar la matriz tf-idf y similitud
+tfidf_matrix = vectorizer.transform(df['text_for_vector'])
+similarity_matrix = cosine_similarity(tfidf_matrix, tfidf_matrix)
+
+# Mapa título -> indice
+title_to_index = pd.Series(df.index, index=df['title'])
+
+
+def recomendar(titulo: str, top_n: int=5):
+    if titulo not in title_to_index:
         return []
-    
-    recomendaciones = resultados.head(n_resultados).to_dict(orient="records")
-    return recomendaciones
+    idx = title_to_index[titulo]
+    sim_scores = list(enumerate(similarity_matrix[idx]))
+    sim_scores = sorted(sim_scores, key=lambda x: x[1], reverse=True)
+    sim_scores = sim_scores[1:top_n+1]
+    return [(df.iloc[i]['title'], df.iloc[i]['id'], round(score, 3)) for i, score in sim_scores]
