@@ -7,7 +7,7 @@ df = pd.read_csv("data/processed/peliculas_enriquecidas.csv")
 df = df.reset_index(drop=True)
 
 #Carga del vectorizador y creación de la matriz
-vectorizer = joblib.load('model/modelos_guardados/tfidf_vectorizer.pk1')
+vectorizer = joblib.load('model/modelos_guardados/tfidf_vectorizer.pkl')
 df['keywords_text'] = df['keywords_tfidf'].apply(lambda x: ' '.join(eval(x)) if isinstance(x, str) else '')
 df['genres_text'] = df['genres'].apply(lambda x: ' '.join(eval(x)) if isinstance(x, str) else '')
 df['topic_id_str'] = df['topic_id'].astype(str)

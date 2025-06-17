@@ -9,11 +9,11 @@
         <div class="container">
             <h1>Recomendador de películas por IA</h1>
             <form method="post" action="/recomendar">
-                <label for="titulo">ETítulo de la película</label><br>
+                <label for="titulo">Título de la película</label><br>
                 <input type="text" id="titulo" name="titulo" required><br>
 
                 <label for="top_n">Número de recomendaciones:</label>
-                <input type="numer" id="top_n" name="top_n" min="1" max="10" value="5">
+                <input type="number" id="top_n" name="top_n" min="1" max="10" value="5">
 
                 <button type="submit">Recomendar</button>
             </form>
