@@ -18,6 +18,6 @@ async def recomendar_endpoint(request: Request, titulo: str = Form(...), top_n: 
     recomendaciones = recomendar(titulo, top_n)
     return templates.TemplateResponse("resultados.html", {
         "request": request,
-        "titulo": titulo,
+        "titulo": titulo_original,
         "recomendaciones": recomendaciones
     })    

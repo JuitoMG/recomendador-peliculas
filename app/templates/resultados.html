@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang=""es>
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -15,7 +15,7 @@
         <ul>
             {% for titulo_rec, id_rec, score in recomendaciones %}
                 <li>
-                    <strong>{{ titulo_rec }}</strong> (ID: {{ id_rec }}) - Similitud: {{ score }}
+                    <strong>{{ titulo_rec }}</strong> (ID: {{ id_rec }}) - Similitud: {{ "%.2f"|format(score) }}
                 </li>
             {% endfor %}
             </ul>
