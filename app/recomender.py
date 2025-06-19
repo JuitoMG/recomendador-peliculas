@@ -34,12 +34,13 @@ title_to_index = pd.Series(df.index, index=df['title'].str.strip().str.lower())
 
 
 def recomendar(titulo: str, top_n: int=5):
-    titulo = titulo.strip().lower
-    if titulo not in title_to_index:
-        return []
-    idx = title_to_index[titulo]
+    titulo_normalizado = titulo.strip().lower()
+    if titulo_normalizado not in title_to_index:
+        return None, None
+    idx = title_to_index[titulo_normalizado]
     sim_scores = list(enumerate(similarity_matrix[idx]))
     sim_scores = sorted(sim_scores, key=lambda x: x[1], reverse=True)
     sim_scores = sim_scores[1:top_n+1]
     titulo_original = df.iloc[idx]['title']
-    return [(df.iloc[i]['title'], df.iloc[i]['id'], round(score, 3)) for i, score in sim_scores]
+    recomendaciones = [(df.iloc[i]['title'], df.iloc[i]['id'], round(score, 3)) for i, score in sim_scores]
+    return recomendaciones, titulo_original

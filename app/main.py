@@ -2,7 +2,7 @@ from fastapi import FastAPI, Request, Form
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
-from app.recomender import recomendar
+from app.recomender import recomendar as recomendar_peliculas
 
 app = FastAPI(title="Recomendador de Películas por IA")
 
@@ -14,8 +14,8 @@ async def formulario(request: Request):
     return templates.TemplateResponse("index.html", {"request": request})
 
 @app.post("/recomendar", response_class=HTMLResponse)
-async def recomendar_endpoint(request: Request, titulo: str = Form(...), top_n: int = Form(...)):
-    recomendaciones = recomendar(titulo, top_n)
+def recomendar(request: Request, titulo: str = Form(...), top_n: int = Form(...)):
+    recomendaciones, titulo_original = recomendar_peliculas(titulo, top_n)
     return templates.TemplateResponse("resultados.html", {
         "request": request,
         "titulo": titulo_original,
