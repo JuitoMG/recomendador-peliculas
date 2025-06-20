@@ -8,15 +8,27 @@
     <body>
         <div class="container">
             <h1>Recomendador de películas por IA</h1>
+
             <form method="post" action="/recomendar">
-                <label for="titulo">Título de la película</label><br>
-                <input type="text" id="titulo" name="titulo" required><br>
+                <label for="titulo">Escribe el título de una película</label><br>
+                <input type="text" id="titulo" name="titulo" autocomplete="off" required><br>
+
+                <div id="resultados-busqueda"></div>
+
+                <input type="hidden" id="movie_id" name="movie_id">
 
                 <label for="top_n">Número de recomendaciones:</label>
                 <input type="number" id="top_n" name="top_n" min="1" max="10" value="5">
 
-                <button type="submit">Recomendar</button>
+                <button type="submit" id="submit-btn" disabled>Recomendar</button>
             </form>
         </div>
     </body>
 </html>
+
+<script>
+    const inputTitulo = document.getElementById("titulo");
+    const resultadosDiv = document.getElementById("resultados-busqueda");
+    const movieIdInput = document.getElementById("movie_id");
+    const submitBtn = document.getElementById("submit-btn")
+</script>
