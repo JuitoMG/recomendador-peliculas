@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 
 # Carga del entorno
 load_dotenv()
-TMDB_API_KEY = os.getenv("TMDB_API_KEY")
+TMDB_BEARER = os.getenv("TMDB_BEARER_TOKEN")
 
 app = FastAPI(title="Recomendador de Películas por IA")
 
@@ -33,24 +33,30 @@ def recomendar(request: Request, titulo: str = Form(...), top_n: int = Form(...)
 
 @app.get("/buscar_pelicula", response_class=JSONResponse)
 def buscar_pelicula(titulo: str):
-    
     url = f"https://api.themoviedb.org/3/search/movie"
+    headers = {
+        "Authorization": f"Bearer {TMDB_BEARER}",
+        "Accept": "application/json"
+    }
     params = {
-        "api_key": TMDB_API_KEY,
         "query": titulo,
         "language": "es-ES"
     }
-    response = requests.get(url, params=params)
-    if response.status_code != 200:
+    try:
+        response = requests.get(url, headers=headers, params=params)
+        response.raise_for_status()
+    except requests.exceptions.RequestException as e:
+        print(f"❌ Error al buscar película: {e}")
         return JSONResponse(status_code=500, content={"error": "Error al buscar en TMDB"})
 
     resultados = response.json().get("results", [])
     peliculas = []
-    for r in resultados[:5]:
+    for r in resultados[:5]:  # Puedes ajustar la cantidad
         peliculas.append({
             "id": r["id"],
             "titulo": r["title"],
             "anio": r.get("release_date", "")[:4],
             "poster": f"https://image.tmdb.org/t/p/w200{r['poster_path']}" if r.get("poster_path") else None
         })
+
     return {"peliculas": peliculas}
