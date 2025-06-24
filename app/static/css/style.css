@@ -65,3 +65,9 @@ button:hover {
     font-size: 1rem;
 
 }
+
+#resultados-busqueda {
+    position: absolute;
+    z-index: 10;
+    width: calc(100% - 20px); 
+}

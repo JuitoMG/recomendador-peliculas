@@ -23,7 +23,17 @@ async def formulario(request: Request):
     return templates.TemplateResponse("index.html", {"request": request})
 
 @app.post("/recomendar", response_class=HTMLResponse)
-def recomendar(request: Request, titulo: str = Form(...), top_n: int = Form(...)):
+def recomendar(request: Request, movie_id: int = Form(...), top_n: int = Form(...)):
+    from app.recomender import df
+    fila = df[df["id"] == movie_id]
+    if fila.empty:
+        return templates.TemplateResponse("resultados.html", {
+            "request": request,
+            "titulo": "Desconocido",
+            "recomendaciones": []
+    })
+    titulo = fila.iloc[0]["title"]
+
     recomendaciones, titulo_original = recomendar_peliculas(titulo, top_n)
     return templates.TemplateResponse("resultados.html", {
         "request": request,
@@ -59,4 +69,4 @@ def buscar_pelicula(titulo: str):
             "poster": f"https://image.tmdb.org/t/p/w200{r['poster_path']}" if r.get("poster_path") else None
         })
 
-    return {"peliculas": peliculas}
+    return JSONResponse(content=peliculas)
