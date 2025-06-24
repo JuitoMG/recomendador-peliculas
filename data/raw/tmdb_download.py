@@ -68,7 +68,7 @@ def save_to_json (data, filename):
         json.dump(data, f, ensure_ascii=False, indent=2)
 
 def main():
-    year = 2018
+    year = 2011
     pages = 15
     movies = get_movies_by_year(year, pages=pages)
     enriched = []
