@@ -3,6 +3,7 @@ import json
 import os
 from time import sleep
 from dotenv import load_dotenv
+from tqdm import tqdm
 
 #Cargar la clave de la API
 load_dotenv()
@@ -17,7 +18,8 @@ HEADERS = {
 
 def get_movies_by_year(year, pages=5):
     all_movies = []
-    for page in range(1, pages+1):
+    print(f"Descargando películas del año {year} ({pages} páginas)...")
+    for page in tqdm(range(1, pages+1), desc="Paginas TMDB"):
         url = f"{BASE_URL}/discover/movie?language={LANG}&sort_by=popularity.desc&primary_release_year={year}&page={page}"
         resp = requests.get(url, headers= HEADERS)
         if resp.status_code == 200:
@@ -66,9 +68,13 @@ def save_to_json (data, filename):
         json.dump(data, f, ensure_ascii=False, indent=2)
 
 def main():
-    movies = get_movies_by_year(2024, pages=15)
+    year = 2018
+    pages = 15
+    movies = get_movies_by_year(year, pages=pages)
     enriched = []
-    for m in movies:
+
+    print(f"Detalles para {len(movies)} películas...")
+    for m in tqdm(movies, desc="Películas procesadas"):
         details = get_movie_details(m['id'])
         director = get_director(m['id'])
         if details:
@@ -92,7 +98,7 @@ def main():
 
             })
         sleep(0.25) 
-    save_to_json(enriched, "movies_2024.json")
+    save_to_json(enriched, f"movies_{year}.json")
     print("Descarga completada.") 
 
 if __name__ == "__main__":
