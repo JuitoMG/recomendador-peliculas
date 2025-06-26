@@ -590,3 +590,6 @@ Recomendaciones:
 🎬 Speed: Máxima potencia (ID: 1637) - Similitud: 3.492 - Razones: ['genres', 'country']
 🎬 Enemy Gold (ID: 49983) - Similitud: 3.428 - Razones: ['genres', 'country']
 🎬 Al borde del abismo (ID: 49527) - Similitud: 3.314 - Razones: ['country', 'topic']
+
+
+*Finalmente se decide descargar más datasets para enriquecer el modelo y para poder recomendar películas de más años
